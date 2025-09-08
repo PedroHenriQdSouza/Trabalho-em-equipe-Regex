@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/formulário.css">
+    <script src="../js/Validacao.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+        <div class="container">
+            <div class="titulo">
+                <h1>Formulário</h1>
+            </div>
+            <form class="form1" action="#" method="get" name="form1" onsubmit="return validaform()">
+
+                <div class="input">
+                    <label>Nome</label>
+                    <input type="text" name="txtnome" id="nome">
+                    
+                </div>
+
+                <div class="input">
+                    <label>E-mail</label>
+                    <input type="email" name="txtmail" id="email" placeholder="exemplo@email.com">
+                    
+                </div>
+
+                <div class="input">
+                    <label>Cpf</label><!-- Colocar placeholder em todos XXX.XXX.XXX-XX-->
+                    <input type="text" name="txtcpf" id="cpf" placeholder="000.000.000-00">
+                    
+                </div>
+
+                <div class="input data">
+                    <label>Data de nascimento</label>
+                    <input type="date" id="date">
+                    
+                </div>
+
+                <label class="sexo">Sexo</label>
+
+                <div class="radio">
+                    <div class="sexo">
+                        <label>Masculino</label>
+                        <input type="radio" name="Sexo">
+                    </div>
+                    <div class="sexo">
+                        <label>Femininio</label>
+                        <input type="radio" name="Sexo">
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+
+    <footer>
+        <p>copyright © ADS2025</p>
+    </footer>
+</body>
+
+</html>
