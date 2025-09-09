@@ -50,3 +50,20 @@ body{
     margin-left: 10px;
     align-items: center;
 }
+.input textarea{
+    border: 2px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    padding-left: 10px;
+    max-width: 95%;
+    min-width: 95%;
+}
+.botoes{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.botoes button{
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid rgb(214, 214, 214);
+}
