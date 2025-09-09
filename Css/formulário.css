@@ -39,6 +39,12 @@ body{
     width: 100%;
     flex-direction: column;
 }
+.input input{
+    border-radius: 50px;
+    border: 2px solid rgb(214, 214, 214);
+    height: 25px;
+    padding-left: 10px;
+}
 .input label{
     display: flex;
     margin-left: 10px;
