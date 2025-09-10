@@ -65,7 +65,11 @@ function substituirTexto() {
         "palhaço": "🤡",
         "casa": "🏠",
         "puto": "😡",
-        "idiota": "@#%*!&"
+        "merda": "💩",
+        "idiota": "@#%*!&",
+        "arronbado": "@#%*!&",
+        "bosta": "@#%*!&",
+        "puta": "@#%*!&"
     };
 
     // Regex que captura todas as palavras do dicionário
