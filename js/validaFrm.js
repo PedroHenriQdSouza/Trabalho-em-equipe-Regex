@@ -39,17 +39,7 @@ function validafrm() {
         document.form1.textcnpj.focus();
         return false;
     }
-
-    var dataNasc = document.form1.txtdata.value;
-    var dataNascRegex = new RegExp("^(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[0-2])[\/](19|20)\d{2}$");
-
-
-    if (!dataNascRegex.test(dataNasc)) {
-
-        alert("❌Preencha o campo de Data de Nascimento corretamente!");
-        document.form1.txtdata.focus();
-        return false;
-    }
+    return false;
 }
 function txtarea() {
     alert("função 2 ok (validando textarea )");
