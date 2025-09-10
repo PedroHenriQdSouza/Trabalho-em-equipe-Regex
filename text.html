@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Regex com Replace</title>
+</head>
+<body>
+  <h2>Substituir Palavras com Regex</h2>
+  <textarea id="entrada" rows="6" cols="40" placeholder="Digite algo aqui..."></textarea>
+  <br><br>
+  <button onclick="substituirTexto()">Substituir</button>
+  <h3>Resultado:</h3>
+  <div id="resultado" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;"></div>
+
+  <script>
+    function substituirTexto() {
+      let texto = document.getElementById("entrada").value;
+
+      // Exemplo de regex: substituir "bobo" ou "feio" por ***
+      let regex = /\b(bobo|feio)\b/gi;
+      let resultado = texto.replace(regex, "***");
+
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Censura dinâmica com Regex</title>
+</head>
+<body>
+  <h2>Censura de Palavras</h2>
+
+  <textarea id="entrada" rows="6" cols="40" placeholder="Digite algo aqui..."></textarea>
+  <br><br>
+  <button onclick="substituirTexto()">Censurar</button>
+
+  <h3>Resultado:</h3>
+  <div id="resultado" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;"></div>
+
+  <script>
+    function substituirTexto() {
+      let texto = document.getElementById("entrada").value;
+
+      // Dicionário de censura
+      const censura = {
+        "bobo": "***",
+        "feio": "😡",
+        "chato": "[oculto]"
+      };
+
+      // Regex que captura todas as palavras do dicionário
+      let regex = new RegExp("\\b(" + Object.keys(censura).join("|") + ")\\b", "gi");
+
+      // Substituição dinâmica
+      let resultado = texto.replace(regex, function(palavra) {
+        // Normaliza para minúsculas
+        let chave = palavra.toLowerCase();
+        return censura[chave] || palavra;
+      });
+
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</body>
+</html>
