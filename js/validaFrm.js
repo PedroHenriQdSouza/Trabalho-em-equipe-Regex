@@ -38,38 +38,42 @@ function validafrm() {
         alert("❌Preencha o campo de CNPJ corretamente!");
         document.form1.textcnpj.focus();
         return false;
+        return false;
     }
 
-    var dataNasc = document.form1.txtdata.value;
-    var dataNascRegex = new RegExp("^(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[0-2])[\/](19|20)\d{2}$");
+    var telefone = document.form1.txtfone.value
+    var foneRegex = new RegExp("^[(]{1}[0-9]{2}[)]{1}([ ]{1})?[0-9]{4,5}[-]{1}[0-9]{4}$");
 
-
-    if (!dataNascRegex.test(dataNasc)) {
-
-        alert("❌Preencha o campo de Data de Nascimento corretamente!");
-        document.form1.txtdata.focus();
+    if (!foneRegex.test(telefone)) {
+        alert("❌Preencha o campo de telefone corretamente!");
+        document.form1.txtfone.focus();
         return false;
     }
 }
-function txtarea() {
-    alert("função 2 ok (validando textarea )");
+function substituirTexto() {
+    const textarea = document.getElementById('area');
+    const texto = textarea.value;
 
-    /* var textarea = document.form1.txtarea.value;
-    var textareaRegex = new RegExp("^[A-zÀ-ü]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
-    var textareaCensurado = textarea.replace(textareaRegex, 'palavra')
+    // Dicionário de censura
+    const censura = {
+        "avião": "✈️",
+        "carro": "🚗",
+        "moto": "🏍️",
+        "feliz": "😁",
+        "palhaço": "🤡",
+        "casa": "🏠",
+        "puto": "😡",
+        "idiota": "@#%*!&"
+    };
 
-    if(!textareaRegex.test(textarea)){
-        alert("Tá errado isso ai")
-        return false;
-    }
+    // Regex que captura todas as palavras do dicionário
+    const regex = new RegExp("\\b(" + Object.keys(censura).join("|") + ")\\b", "gi");
 
-     */
+    // Substituição dinâmica
+    const textoCensurado = texto.replace(regex, (palavra) => {
+        const chave = palavra.toLowerCase();
+        return censura[chave] || palavra;
+    });
 
-    const textarea = document.getElementById("area");
-    const regex1 = /Avião/gi; // 'gi' for global and case-insensitive replacement
-
-    const replacement1 = "✈️🚗🏠👴";
-    textarea.value = textarea.value.replace(regex, replacement1);
-
-    return false;
+    textarea.value = textoCensurado;
 }
