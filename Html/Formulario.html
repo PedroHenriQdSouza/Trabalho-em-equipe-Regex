@@ -112,6 +112,23 @@
                 <input type="text" name="txtfone" id="fone" placeholder="(00)00000-0000">
             </div>
 
+            <button type="button" onclick="mostrarFone()">Como fazer:</button>
+
+            <div id="conteudo5" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/foneHTML.png" alt="Código html Fone">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/foneJS.png" alt="Código JavaScript Fone">
+            </div>
+
+            <script>
+                function mostrarFone() {
+                    const bloco = document.getElementById("conteudo5");
+                    bloco.style.display = (bloco.style.display === "none") ? "block" : "none";
+                }
+            </script>
+
 <!--Comentário-->
             <div class="input">
                 <label>Comentário</label>
