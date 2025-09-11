@@ -143,8 +143,8 @@ function substituirTexto() {
         "música": "🎵",
         "festa": "🥳",
         "viagem": "🌍✈️",
-    
-        // Xingamentos leves / pesados
+/*     
+        // Xingamentos
         "puto": "@#%*!&",
         "puta": "@#%*!&",
         "merda": "@#%*!&",
@@ -184,7 +184,7 @@ function substituirTexto() {
         "canalha": "@#%*!&",
         "cretino": "@#%*!&",
         "safado": "@#%*!&",
-        "safada": "@#%*!&"
+        "safada": "@#%*!&" */
     };
     
 
