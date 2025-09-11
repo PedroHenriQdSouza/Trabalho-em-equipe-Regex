@@ -56,9 +56,9 @@ function substituirTexto() {
     const textarea = document.getElementById('area');
     const texto = textarea.value;
 
-    // Dicionário de censura
+
     const censura = {
-        // Palavras neutras
+      
         "avião": "✈️",
         "carro": "🚗",
         "moto": "🏍️",
@@ -143,48 +143,7 @@ function substituirTexto() {
         "música": "🎵",
         "festa": "🥳",
         "viagem": "🌍✈️",
-/*     
-        // Xingamentos
-        "puto": "@#%*!&",
-        "puta": "@#%*!&",
-        "merda": "@#%*!&",
-        "bosta": "@#%*!&",
-        "cocô": "@#%*!&",
-        "idiota": "@#%*!&",
-        "burro": "@#%*!&",
-        "otário": "@#%*!&",
-        "otaria": "@#%*!&",
-        "arrombado": "@#%*!&",
-        "arrombada": "@#%*!&",
-        "desgraçado": "@#%*!&",
-        "desgraçada": "@#%*!&",
-        "porra": "@#%*!&",
-        "caralho": "@#%*!&",
-        "viado": "@#%*!&",
-        "vadia": "@#%*!&",
-        "vagabundo": "@#%*!&",
-        "vagabunda": "@#%*!&",
-        "corno": "@#%*!&",
-        "cornudo": "@#%*!&",
-        "pau": "@#%*!&",
-        "rola": "@#%*!&",
-        "piroca": "@#%*!&",
-        "penis": "@#%*!&",
-        "buceta": "@#%*!&",
-        "xereca": "@#%*!&",
-        "xota": "@#%*!&",
-        "cu": "@#%*!&",
-        "cuzão": "@#%*!&",
-        "cuzona": "@#%*!&",
-        "foda": "@#%*!&",
-        "fodido": "@#%*!&",
-        "fodida": "@#%*!&",
-        "escroto": "@#%*!&",
-        "escrota": "@#%*!&",
-        "canalha": "@#%*!&",
-        "cretino": "@#%*!&",
-        "safado": "@#%*!&",
-        "safada": "@#%*!&" */
+
     };
     
 
